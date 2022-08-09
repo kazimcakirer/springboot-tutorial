@@ -9,17 +9,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.kazim.datajpa.dto.UserDto;
-import com.kazim.datajpa.service.IUserService;
+import com.kazim.datajpa.service.UserService;
 
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("/kisi")
+@RequestMapping("/users")
 @RequiredArgsConstructor
 public class UserController {
 
 	
-	private IUserService userService;
+	private final UserService userService;
 	
 	@PostMapping
 	public ResponseEntity<UserDto> kaydet(UserDto userDto){

@@ -7,7 +7,8 @@ import org.springframework.data.domain.Pageable;
 
 import com.kazim.datajpa.dto.UserDto;
 
-public interface IUserService {
+
+public interface UserService {
 
 	UserDto save(UserDto user);
 

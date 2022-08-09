@@ -2,15 +2,7 @@ package com.kazim.datajpa.entity;
 
 import java.util.List;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.SequenceGenerator;
-import jakarta.persistence.Table;
+import javax.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -19,7 +11,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Table(name="user")
+@Table(name="userA")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -40,7 +32,7 @@ public class User {
 	private String lastName;
 	
 	@OneToMany
-	@JoinColumn(name="user_addres_id")
+	@JoinColumn(name="us_ad_id")
 	private List<Address> address;
 
 }
