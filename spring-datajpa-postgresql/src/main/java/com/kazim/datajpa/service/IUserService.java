@@ -1,5 +1,7 @@
 package com.kazim.datajpa.service;
 
+import java.util.List;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -11,7 +13,7 @@ public interface IUserService {
 
 	void delete(Long id);
 
-	UserDto getAll(UserDto user);
+	List<UserDto> getAll();
 
 	Page<UserDto> getAll(Pageable pageable);
 }
